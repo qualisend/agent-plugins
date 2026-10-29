@@ -22,7 +22,7 @@ In Grok Bot (0.49 or newer), connect **Qualisend** from the connector list, then
 
 ### Grok Build
 
-Install **qualisend** from the xAI plugin marketplace.
+In Grok Build, open `/plugin`, search for **Qualisend**, and install.
 
 ### Claude Code
 

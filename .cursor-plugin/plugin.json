@@ -29,5 +29,6 @@
     "email",
     "mcp"
   ],
+  "skills": "./skills/",
   "mcpServers": "./mcp.json"
 }

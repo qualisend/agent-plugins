@@ -33,7 +33,7 @@ and should not be collapsed into "good/bad":
   category that causes hard bounces.
 - **`risky`** - the server answered, but not in a way that confirms the mailbox.
   Most often a catch-all domain (accepts everything, so nothing can be proven),
-  a full mailbox, or a role address. Sending is a judgement call - see below.
+  a full mailbox, or a disposable address. Sending is a judgement call - see below.
 - **`unknown`** - no verdict could be reached, usually because the receiving
   server refused the probe or timed out. **`unknown` is not a bounce prediction.**
   Do not remove these; re-check later or treat them as unverified.

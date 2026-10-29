@@ -50,7 +50,7 @@ Idempotency-Key: <uuid>        # optional; makes retries safe, no double charge
 
 `POST /api/v1/verify` returns **immediately with the local verdict** - syntax,
 domain, disposable, role, typo - while the mailbox probe is still running. The
-response carries `smtp: "pending"` and a `job_id`.
+body is `{ job_id, result }`, and `result.smtp` is `"pending"` while the probe runs.
 
 If you treat that first response as final, a perfectly deliverable address reads
 as `unknown`, because the mailbox check had not finished yet. Poll
@@ -67,18 +67,20 @@ const res = await fetch("https://app.qualisend.com/api/v1/verify", {
   },
   body: JSON.stringify({ email }),
 });
-let result = await res.json();
+const body = await res.json();
+let result = body.result;
 
 // The mailbox probe is asynchronous. Without this, a deliverable address
 // comes back "unknown" simply because the probe had not landed yet.
 if (result.smtp === "pending") {
   const deadline = Date.now() + 8000;
   while (Date.now() < deadline) {
-    await new Promise((r) => setTimeout(r, 300));
+    // Polls count against the per-minute rate limit, so keep them sparse.
+    await new Promise((r) => setTimeout(r, 1000));
     // `include=results` is required - without it the response carries only
     // status and progress counters, and `results` is simply absent.
     const poll = await fetch(
-      `https://app.qualisend.com/api/v1/jobs/${result.job_id}?include=results`,
+      `https://app.qualisend.com/api/v1/jobs/${body.job_id}?include=results`,
       { headers: { Authorization: `Bearer ${process.env.QUALISEND_API_KEY}` } },
     );
     const job = await poll.json();
