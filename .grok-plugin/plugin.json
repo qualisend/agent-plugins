@@ -1,0 +1,15 @@
+{
+  "name": "qualisend",
+  "version": "1.0.0",
+  "description": "Qualisend email verification and deliverability (hosted MCP server + skills). Verify one address or a list of up to 1,000, check credits, and on Pro review a domain's SPF and DMARC, generate DNS records, read message headers and explain SMTP codes. Sign in with your Qualisend account; no API key needed.",
+  "author": {
+    "name": "Qualisend",
+    "email": "hello@qualisend.com",
+    "url": "https://www.qualisend.com"
+  },
+  "homepage": "https://www.qualisend.com/mcp",
+  "repository": "https://github.com/qualisend/agent-plugins",
+  "license": "MIT",
+  "keywords": ["qualisend", "qualisend email verification", "qualisend email verifier", "qualisend mcp", "qualisend deliverability"],
+  "logo": "assets/logo.png"
+}

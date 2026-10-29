@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "qualisend": {
+      "type": "http",
+      "url": "https://app.qualisend.com/api/mcp"
+    }
+  }
+}

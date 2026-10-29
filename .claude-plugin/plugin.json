@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "qualisend",
+  "displayName": "Qualisend",
+  "version": "1.0.0",
+  "description": "Check whether email addresses are real before you send to them, and whether your own domain is set up to reach the inbox. Verification, SPF/DMARC review, blacklist checks, and bounce diagnosis.",
+  "author": {
+    "name": "Qualisend",
+    "email": "hello@qualisend.com",
+    "url": "https://www.qualisend.com"
+  },
+  "homepage": "https://www.qualisend.com/mcp",
+  "documentationUrl": "https://www.qualisend.com/mcp",
+  "supportUrl": "https://www.qualisend.com/contact",
+  "privacyPolicyUrl": "https://www.qualisend.com/privacy-policy",
+  "termsOfServiceUrl": "https://www.qualisend.com/terms-of-service",
+  "repository": "https://github.com/qualisend/agent-plugins",
+  "license": "MIT",
+  "keywords": [
+    "qualisend",
+    "qualisend email verification",
+    "qualisend email verifier",
+    "qualisend mcp",
+    "qualisend deliverability"
+  ]
+}

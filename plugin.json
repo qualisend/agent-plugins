@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "qualisend",
+  "version": "1.0.0",
+  "description": "Verify email addresses, clean lists, and check domain deliverability through Qualisend's hosted MCP server.",
+  "author": {
+    "name": "Qualisend",
+    "email": "hello@qualisend.com",
+    "url": "https://www.qualisend.com"
+  },
+  "homepage": "https://www.qualisend.com/mcp",
+  "repository": "https://github.com/qualisend/agent-plugins",
+  "license": "MIT",
+  "keywords": [
+    "qualisend",
+    "qualisend email verification",
+    "qualisend email verifier",
+    "qualisend mcp",
+    "qualisend deliverability"
+  ]
+}
